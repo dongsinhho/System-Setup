@@ -15,6 +15,9 @@ spec:
       containers:
       - name: api
         image: dongsinhho/bikeRentalApi:latest
+        envFrom:
+        - secretKeyRef:
+            name: api_secret
         resources:
           limits:
             memory: "128Mi"

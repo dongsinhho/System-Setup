@@ -36,13 +36,13 @@ __Note__ : Tạo Vagrantfile để khởi tạo 3 máy ảo (optional)
 ##### 1. Xây dựng Cluster gồm 3 máy ảo (cloud hoặc virtual local machine) - các bước như trên
 - [ ] Viết mongo, mongo-express image, api image, push image lên docker hub
 - [ ] Viết deployment.yaml service.yaml secret.yaml cho database và api server
-- [ ] Vagrantfile, setup network
-- [ ] Cài đặt Docker, Git, Kubernetes
+- [x] Vagrantfile, setup network
+- [x] Cài đặt Docker, Git, Kubernetes
 - [ ] Triển khai code, vào cluster và deploy
 ##### 2. Xây dựng các station trên các Raspberry
-- [ ] Cài hệ điều hành, package, module, setup mạch
+- [x] Cài hệ điều hành, package, module, setup mạch
 - [ ] Hoàn thành api và tương tác với mạch vật lý
-- [ ] Cài đặt docker, git
+- [x] Cài đặt docker, git
 - [ ] Triển khai lên các thiết bị
 ##### 3. Kiểm tra thực nghiệm 3 tầng, tương tác giữa các thiết bị
 - [ ] Chạy hệ thống cluster, edge, mobile để kiểm tra tính kết nối

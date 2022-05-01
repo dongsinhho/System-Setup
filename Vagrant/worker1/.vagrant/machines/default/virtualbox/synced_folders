@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/home/shin/Data/System-Setup/Vagrant/worker1","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
