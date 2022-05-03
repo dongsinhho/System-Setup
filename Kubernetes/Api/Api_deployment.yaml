@@ -1,23 +1,51 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bike_rental_api
+  name: bike-rental-api
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: bike_rental_api
+      app: bike-rental-api
   template:
     metadata:
       labels:
-        app: bike_rental_api
+        app: bike-rental-api
     spec:
       containers:
       - name: api
-        image: dongsinhho/bikeRentalApi:latest
-        envFrom:
-        - secretKeyRef:
-            name: api_secret
+        image: dongsinhho/bikerentalapi:v1
+        env:
+        - name: PORT
+          valueFrom:
+            secretKeyRef:
+              key: port
+              name: api-secret
+        - name: MONGO_URL
+          valueFrom:
+            secretKeyRef:
+              key: mongo_url
+              name: api-secret
+        - name: JWT_SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              key: jwt_secret_key
+              name: api-secret
+        - name: EXPIRES_IN
+          valueFrom:
+            secretKeyRef:
+              key: expires_in
+              name: api-secret
+        - name: STATION_EXPIRES_IN
+          valueFrom:
+            secretKeyRef:
+              key: station_expires_in
+              name: api-secret
+        - name: STATION_PORT
+          valueFrom:
+            secretKeyRef:
+              key: station_port
+              name: api-secret
         resources:
           limits:
             memory: "128Mi"
