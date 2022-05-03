@@ -50,3 +50,8 @@ __Note__ : Tạo Vagrantfile để khởi tạo 3 máy ảo (optional)
 - [ ] Triển khai server Prometheus và Grafana
 - [ ] Triển khai các Exporter vào các raspberry để thu thập dữ liệu và gửi về server.
 - [ ] Tạo luồng cảnh báo
+
+
+**NOTE 
+- Lay env tu kubernetes 
+- Persitent volume cho mongodb

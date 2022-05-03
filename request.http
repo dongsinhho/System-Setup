@@ -1,0 +1,11 @@
+POST http://192.168.10.100:30300/api/users/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "sinhdeptrai@gmail.com",
+    "name": "sinhdeptrai",
+    "password": "Sinhdeptrai123",
+    "phone": "0373418673"
+}
+###
+GET  http://192.168.10.100:30300/ HTTP/1.1
