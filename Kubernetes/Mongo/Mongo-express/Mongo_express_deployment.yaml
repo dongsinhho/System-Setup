@@ -39,18 +39,13 @@ spec:
               configMapKeyRef:
                 key: database_url
                 name: mongodb-configmap
-          # - name: ME_CONFIG_MONGODB_AUTH_DATABASE
-          #   valueFrom:
-          #     configMapKeyRef:
-          #       key: mongo-database-name
-          #       name: mongodb-configmap
-          # - name: ME_CONFIG_MONGODB_AUTH_USERNAME
-          #   valueFrom:
-          #     secretKeyRef:
-          #       key: mongo-root-username
-          #       name: mongodb-secret
-          # - name: ME_CONFIG_MONGODB_AUTH_PASSWORD
-          #   valueFrom:
-          #     secretKeyRef:
-          #       key: mongo-root-password
-          #       name: mongodb-secret        
+          - name: ME_CONFIG_BASICAUTH_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: mongodb-secret
+                key: mongo-root-username
+          - name: ME_CONFIG_BASICAUTH_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mongodb-secret
+                key: mongo-root-password
