@@ -23,6 +23,9 @@ spec:
             cpu: "100m"
         ports:
         - containerPort: 27017
+        volumeMounts:
+          - name: mongo-persistent-storage
+            mountPath: /data/db
         env: 
         - name: MONGO_INITDB_ROOT_USERNAME
           valueFrom:
@@ -34,4 +37,9 @@ spec:
             secretKeyRef:
               name: mongodb-secret
               key: mongo-root-password
+      volumes:
+        - name: mongo-persistent-storage 
+          hostPath:
+            path: /data/database
+            type: DirectoryOrCreate
 
