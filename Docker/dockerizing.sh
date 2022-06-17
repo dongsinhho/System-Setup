@@ -1,7 +1,7 @@
 
-git clone https://github.com/addonrizky/hellome.git
-cp Dockerfile hellome/.
-cd hellome
-docker build -t rizkyaddon/hellome:v1 .
+git clone https://github.com/dongsinhho/Bike-Rental-System.git
+cp Dockerfile Bike-Rental-System/.
+cd dongsinhho
+docker build -t dongsinhho/Bike-Rental-System:v1 .
 cd ..
-rm -rf hellome
+rm -rf dongsinhho

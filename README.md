@@ -34,8 +34,8 @@ $ kubeadm token create --print-join-command
 __Note__ : Tạo Vagrantfile để khởi tạo 3 máy ảo (optional) 
 
 ##### 1. Xây dựng Cluster gồm 3 máy ảo (cloud hoặc virtual local machine) - các bước như trên
-- [ ] Viết mongo, mongo-express image, api image, push image lên docker hub
-- [ ] Viết deployment.yaml service.yaml secret.yaml cho database và api server
+- [x] Viết mongo, mongo-express image, api image, push image lên docker hub
+- [x] Viết deployment.yaml service.yaml secret.yaml cho database và api server
 - [x] Vagrantfile, setup network
 - [x] Cài đặt Docker, Git, Kubernetes
 - [ ] Triển khai code, vào cluster và deploy
@@ -43,7 +43,7 @@ __Note__ : Tạo Vagrantfile để khởi tạo 3 máy ảo (optional)
 - [x] Cài hệ điều hành, package, module, setup mạch
 - [ ] Hoàn thành api và tương tác với mạch vật lý
 - [x] Cài đặt docker, git
-- [ ] Triển khai lên các thiết bị
+- [x] Triển khai lên các thiết bị
 ##### 3. Kiểm tra thực nghiệm 3 tầng, tương tác giữa các thiết bị
 - [ ] Chạy hệ thống cluster, edge, mobile để kiểm tra tính kết nối
 ##### 4. Triển khai hệ thống giám sát các node edge
@@ -53,5 +53,6 @@ __Note__ : Tạo Vagrantfile để khởi tạo 3 máy ảo (optional)
 
 
 **NOTE 
-- Lay env tu kubernetes 
-- Persitent volume cho mongodb
+- Install onoff module and implement microchip
+- Implement grafana, prometheus
+- Build web views for station - done
